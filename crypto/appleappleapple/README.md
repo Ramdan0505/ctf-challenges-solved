@@ -60,12 +60,22 @@ The ciphertext was decrypted using a Vigenère cipher with the key `apple`.
 
 ### Python Decryption Script
 
+
+---
+
+## Decryption Process
+
+The ciphertext was decrypted using a Vigenère cipher with the key `apple`.
+
+### Python Decryption Script
+
+```python
 def vigenere_decrypt(ciphertext, key):
     result = ""
     key = key.lower()
     key_index = 0
 
-   for char in ciphertext:
+    for char in ciphertext:
         if char.isalpha():
             offset = ord('A') if char.isupper() else ord('a')
             decrypted_char = (
@@ -76,7 +86,8 @@ def vigenere_decrypt(ciphertext, key):
         else:
             result += char
 
-  return result
+    return result
 
 ciphertext = "AcPatItPOeyZtptsIWpHorizvsPllc"
 print(vigenere_decrypt(ciphertext, "apple"))
+
